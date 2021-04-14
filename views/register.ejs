@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('partials/head') %>
+
+  <body>
+
+    <%- include('partials/header') %>
+    
+    <main>
+      <form action="#" method="POST" class="create-form">
+        <div class="control-formulario">
+          <label for="name"></label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Nombre y apellido"
+            class="control"
+            required
+            pattern="[A-Za-z0-9]{6,10}"  title="Solo permitido letras y numeros entre 6 y 10 caracteres." 
+          />
+        </div>
+
+        <div class="control-formulario">
+          <label for="user-name"></label>
+          <input
+            type="text"
+            id="user-name"
+            placeholder="Nombre de usuario"
+            class="control"
+            required
+            pattern="[A-Za-z0-9]{6,10}"  title="Solo permitido letras y numeros entre 6 y 10 caracteres." 
+          />
+        </div>
+
+        <div class="control-formulario">
+          <label for="email"></label>
+          <input type="email" id="email" placeholder="E-mail" class="control" required />
+        </div>
+
+        <h4>Fecha de nacimiento</h4>
+        <div class="control-formulario">
+          <label for="nacimiento"></label>
+          <input
+            type="date"
+            id="nacimiento"
+            placeholder="Fecha de nacimiento"
+            class="control"
+            required
+          />
+        </div>
+
+        <div class="control-formulario">
+          <label for="adress"></label>
+          <input
+            type="text"
+            id="adress"
+            placeholder="Domicilio"
+            class="control"
+            required
+            pattern="[A-Za-z0-9]{6,20}"  title="Solo permitido letras y numeros entre 6 y 20 caracteres." 
+          />
+        </div>
+
+        <h4>Perfil de usuario</h4>
+        <input type="radio" name="buyer" id="buyer" class="radio-style" />
+        <label for="buyer" class="radio-style">Comprador</label>
+
+        <input type="radio" name="seller" id="seller" class="radio-style" />
+        <label for="seller" class="radio-style">Vendedor</label>
+
+        <h4>Intereses</h4>
+        <div class="interests-container">
+          <input
+            type="checkbox"
+            name="electro"
+            id="electro"
+            class="check-style"
+          />
+          <label for="electro" class="check-style">Electro</label>
+        </div>
+        <div class="interests-container">
+          <input type="checkbox" name="moda" id="moda" class="check-style" />
+          <label for="moda" class="check-style">Moda</label>
+        </div>
+        <div class="interests-container">
+          <input type="checkbox" name="hogar" id="hogar" class="check-style" />
+          <label for="hogar" class="check-style">Hogar</label>
+        </div>
+        <div class="interests-container">
+          <input
+            type="checkbox"
+            name="jugueteria"
+            id="jugueteria"
+            class="check-style"
+          />
+          <label for="jugueteria" class="check-style">Juguetería</label>
+        </div>
+        <div class="interests-container">
+          <input
+            type="checkbox"
+            name="vida-sana"
+            id="vida-sana"
+            class="check-style"
+          />
+          <label for="vida-sana" class="check-style">Vida sana</label>
+        </div>
+
+        <h4>Cargá tu foto</h4>
+        <div class="control-formulario">
+          <label for="user-image"></label>
+          <input type="file" id="user-image" accept=".jpg, .png"/>
+        </div>
+
+        <div class="control-formulario">
+          <label for="password"></label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Escribe tu contraseña"
+            class="control"
+            required
+            pattern="[A-Za-z0-9]{6,10}"  title="Solo permitido letras y numeros entre 6 y 10 caracteres." 
+          />
+        </div>
+        <div class="control-formulario">
+          <label for="password-confirm"></label>
+          <input
+            type="password"
+            id="password-confirm"
+            placeholder="Repite tu contraseña"
+            class="control"
+            required
+            pattern="[A-Za-z0-9]{6,10}"  title="Solo permitido letras y numeros entre 6 y 10 caracteres." 
+          />
+        </div>
+
+        <div class="container-button">
+          <button type="reset" class="button-form">Limpiar formulario</button>
+          <button type="submit" class="button-form">Enviar</button>
+        </div>
+      </form>
+    </main>
+
+    <%- include('partials/footer') %>
+
+  </body>
+</html>

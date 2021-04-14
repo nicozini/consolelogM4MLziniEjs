@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+
+  <body>
+
+    <%- include('partials/header') %>
+
+
+    <main>
+      <form action="#" method="POST" class="create-form">
+        <div class="control-formulario">
+          <label for="user-name"></label>
+          <input
+            type="text"
+            id="user-name"
+            placeholder="Nombre de usuario"
+            class="control"
+            required
+            pattern="[A-Za-z0-9]{6,10}"  title="Solo permitido letras y numeros entre 6 y 10 caracteres." 
+          />
+        </div>
+
+        <div class="control-formulario">
+          <label for="password"></label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Escribe tu contraseña"
+            class="control"
+            required
+            pattern="[A-Za-z0-9]{6,10}"  title="Solo permitido letras y numeros entre 6 y 10 caracteres." 
+          />
+        </div>
+
+        <div class="container-button">
+            <button type="submit" class="button-form">Enviar</button>
+        </div>
+      </form>
+    </main>
+
+    <%- include('partials/footer') %>
+
+  </body>
+</html>
