@@ -22,17 +22,14 @@ app.listen(port || 3000, function() {
 
 
 // -------- Rutas -------- //
-//Home
-app.get('/', (req, res) => {
-    res.render('home');
-});
 
-//Registro
-app.get('/views/register.html', (req, res) => {
-    res.render('register');
-});
+// ¿Dónde están los gerentes?
+const homeRouter = require('./routes/homeRouter');
+const productRouter = require('./routes/productRouter');
+const userRouter = require('./routes/userRouter');
 
-//Inicio de sesión
-app.get('/views/login.html', (req, res) => {
-    res.render('login');
-});
+// Llamo al ruteo --> conecto con las rutas. App.use reemplaza al res.render
+app.use('/', homeRouter);
+// app.use('/', userRouter);
+// app.use('/products', productRouter);
+

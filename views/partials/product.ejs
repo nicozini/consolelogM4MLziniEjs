@@ -1,0 +1,14 @@
+<!-- En mi ejs (html) aplico dinamismo -->
+
+<article>
+
+    <img src="images/<%= product.image %>" alt="Cafetera" class="product_img">
+
+    <div class="main-article">
+        <i class="fas fa-truck"></i>
+        <p class="price">$ <%= product.price %></p>
+        <p class="discount"> <%= product.descuento %> % off</p>
+        <h4 class="description"><%= product.name %></h4>
+    </div>
+
+</article>
